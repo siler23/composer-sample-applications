@@ -8,6 +8,6 @@ RUN npm install --production && \
     npm install --production -g --unsafe-perm pm2 && \
     npm cache clean --force
 COPY app.js /usr/src/app/
-COPY www /usr/src/app/www
+#COPY www /usr/src/app/www
 EXPOSE 6001
 CMD [ "pm2-docker", "npm", "--", "start" ]
